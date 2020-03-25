@@ -186,8 +186,8 @@ func (t *Taxonomy) translate(inf *CategoryInfo, lang string) error {
 }
 
 type CategoryData struct {
-	ID   int64
-	Name string
+	ID   int64  `json:"id"`
+	Name string `json:"name"`
 }
 
 func (dat *CategoryData) String() string {
@@ -199,11 +199,11 @@ func (dat *CategoryData) String() string {
 
 // CategoryInfo describes a category path and it's children
 type CategoryInfo struct {
-	Language string
-	ID       int64
-	Name     string
-	Fullpath []*CategoryData
-	Children []*CategoryData
+	Language string          `json:"language"`
+	ID       int64           `json:"id"`
+	Name     string          `json:"name"`
+	Fullpath []*CategoryData `json:"fullpath"`
+	Children []*CategoryData `json:"children"`
 }
 
 func (inf *CategoryInfo) String() string {
@@ -230,9 +230,9 @@ func (inf *CategoryInfo) String() string {
 }
 
 type category struct {
-	Parent   *category
-	ID       int64
-	Children map[int64]*category
+	Parent   *category           `json:"parent"`
+	ID       int64               `json:"id"`
+	Children map[int64]*category `json:"children"`
 	mux      sync.Mutex
 }
 
