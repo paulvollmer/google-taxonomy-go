@@ -2,12 +2,11 @@ package taxonomy
 
 import (
 	"fmt"
+	"sort"
 	"strings"
 	"sync"
 
-	"sort"
-
-	"github.com/xreception/google-taxonomy-go/data"
+	"github.com/paulvollmer/google-taxonomy-go/data"
 )
 
 // NewTaxonomy returns a taxonomy

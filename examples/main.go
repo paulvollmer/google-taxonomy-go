@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/xreception/google-taxonomy-go/taxonomy"
+	"github.com/paulvollmer/google-taxonomy-go/taxonomy"
 )
 
 const keyLanguage = "en-US"

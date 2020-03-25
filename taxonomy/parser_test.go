@@ -1,11 +1,10 @@
 package taxonomy
 
 import (
+	"fmt"
 	"testing"
 
-	"fmt"
-
-	"github.com/xreception/google-taxonomy-go/data"
+	"github.com/paulvollmer/google-taxonomy-go/data"
 )
 
 func TestTaxonomyDataParse(t *testing.T) {
